@@ -33,9 +33,8 @@ const getSheetData = (): HashMap<string>[] => {
         const key = keys[dataIndex];
 
         data[key] = datums[keyIndex][dataIndex];
+        dataList.push(data);
       }
-
-      dataList.push(data);
     }
   }
 
@@ -59,4 +58,8 @@ const sheetGet = (e: any) => {
   }
 
   return out;
+};
+
+const debug = (): void => {
+  console.log(JSON.stringify(getSheetData()));
 };

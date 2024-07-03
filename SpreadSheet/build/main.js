@@ -1,4 +1,5 @@
 "use strict";
+
 const sheets = SpreadsheetApp.getActiveSpreadsheet().getSheets();
 const getSheetData = () => {
     const dataList = [];
@@ -30,6 +31,7 @@ const getSheetData = () => {
     }
     return dataList;
 };
+
 const sheetGet = (e) => {
     const callback = e.parameter.callback;
     const sheetData = getSheetData();
@@ -47,3 +49,7 @@ const sheetGet = (e) => {
     }
     return out;
 };
+
+const debug = () => {
+  console.log(getSheetData());
+}
